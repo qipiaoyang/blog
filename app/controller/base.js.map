@@ -1,0 +1,26 @@
+{
+    "version": 3,
+    "sources": [
+        "..\\..\\src\\controller\\base.js"
+    ],
+    "names": [
+        "module",
+        "exports",
+        "think",
+        "Controller",
+        "__before",
+        "ctx",
+        "console",
+        "log",
+        "userinfo",
+        "session",
+        "isEmpty",
+        "assign",
+        "redirect"
+    ],
+    "mappings": ";;AAAAA,OAAOC,OAAP,GAAiB,cAAcC,MAAMC,UAApB,CAA+B;AACxCC,UAAN,GAAiB;AAAA;;AAAA;AACf,UAAG,MAAKC,GAAL,CAASF,UAAT,KAAwB,OAAxB,IAAmC,MAAKE,GAAL,CAASF,UAAT,KAAwB,OAA3D,IAAqE,MAAKE,GAAL,CAASF,UAAT,KAAwB,OAAhG,EAAyG;AAAE;AACvG;AACH;AACDG,cAAQC,GAAR,CAAY,MAAKF,GAAjB;AACA,UAAIG,WAAW,MAAM,MAAKC,OAAL,CAAa,UAAb,CAArB;AACA,UAAI,CAACP,MAAMQ,OAAN,CAAcF,QAAd,CAAL,EAA6B;AAC3B,cAAKG,MAAL,CAAY,UAAZ,EAAuBH,QAAvB;AACD,OAFD,MAEK;AACH,eAAO,MAAKI,QAAL,CAAc,cAAd,CAAP;AACD;AAVc;AAWhB;AAZ6C,CAAhD",
+    "file": "..\\..\\src\\controller\\base.js",
+    "sourcesContent": [
+        "module.exports = class extends think.Controller {\n  async __before() {\n    if(this.ctx.Controller === 'admin' && this.ctx.Controller === 'index' ||this.ctx.Controller === 'login' ){ //如果是admin_index那么久不验证了，直接返回给予登录。 \n        return;   \n    } \n    console.log(this.ctx);\n    let userinfo = await this.session('userinfo');\n    if (!think.isEmpty(userinfo)){  \n      this.assign('userinfo',userinfo);  \n    }else{  \n      return this.redirect('/admin/index');  \n    }  \n  }\n};\n"
+    ]
+}

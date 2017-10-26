@@ -1,0 +1,16 @@
+{
+    "version": 3,
+    "sources": [
+        "..\\..\\src\\config\\config.js"
+    ],
+    "names": [
+        "module",
+        "exports",
+        "port"
+    ],
+    "mappings": "AAAA;AACAA,OAAOC,OAAP,GAAiB;AACbC,UAAK;AADQ,CAAjB",
+    "file": "..\\..\\src\\config\\config.js",
+    "sourcesContent": [
+        "// default config\nmodule.exports = {\n    port:3333\n};\n"
+    ]
+}

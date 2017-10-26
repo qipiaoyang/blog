@@ -1,0 +1,73 @@
+{
+  "port": 3333,
+  "workers": 0,
+  "stickyCluster": false,
+  "startServerTimeout": 3000,
+  "reloadSignal": "SIGUSR2",
+  "processKillTimeout": 10000,
+  "jsonpCallbackField": "callback",
+  "jsonContentType": "application/json",
+  "jsonpContentType": "application/javascript",
+  "errnoField": "errno",
+  "errmsgField": "errmsg",
+  "defaultErrno": 1000,
+  "validateDefaultErrno": 1001,
+  "cache": {
+    "type": "file",
+    "file": {
+      "timeout": 86400000,
+      "cachePath": "D:\\gongzuo\\nodeproject\\CmsWing\\blog\\runtime\\cache",
+      "pathDepth": 1,
+      "gcInterval": 86400000
+    }
+  },
+  "model": {
+    "type": "mysql",
+    "mysql": {
+      "logConnect": true,
+      "logSql": true,
+      "database": "blog",
+      "prefix": "",
+      "encoding": "utf8",
+      "host": "127.0.0.1",
+      "port": "3306",
+      "user": "root",
+      "password": "qi956634645",
+      "dateStrings": true
+    }
+  },
+  "session": {
+    "type": "file",
+    "file": {
+      "cookie": {
+        "name": "thinkjs"
+      },
+      "sessionPath": "D:\\gongzuo\\nodeproject\\CmsWing\\blog\\runtime\\session"
+    }
+  },
+  "view": {
+    "type": "nunjucks",
+    "nunjucks": {
+      "viewPath": "D:\\gongzuo\\nodeproject\\CmsWing\\blog\\view",
+      "sep": "_",
+      "extname": ".html"
+    }
+  },
+  "logger": {
+    "type": "console",
+    "console": {},
+    "file": {
+      "backups": 10,
+      "absolute": true,
+      "maxLogSize": 51200,
+      "filename": "D:\\gongzuo\\nodeproject\\CmsWing\\blog\\logs\\app.log"
+    },
+    "dateFile": {
+      "level": "ALL",
+      "absolute": true,
+      "pattern": "-yyyy-MM-dd",
+      "alwaysIncludePattern": true,
+      "filename": "D:\\gongzuo\\nodeproject\\CmsWing\\blog\\logs\\app.log"
+    }
+  }
+}

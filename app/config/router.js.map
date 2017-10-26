@@ -1,0 +1,15 @@
+{
+    "version": 3,
+    "sources": [
+        "..\\..\\src\\config\\router.js"
+    ],
+    "names": [
+        "module",
+        "exports"
+    ],
+    "mappings": "AAAAA,OAAOC,OAAP,GAAiB,CACb,CAAC,QAAD,EAAU,cAAV,CADa,CAAjB",
+    "file": "..\\..\\src\\config\\router.js",
+    "sourcesContent": [
+        "module.exports = [\n    ['/admin','/admin/index']\n];\n"
+    ]
+}
