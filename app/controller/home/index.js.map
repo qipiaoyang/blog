@@ -1,0 +1,19 @@
+{
+    "version": 3,
+    "sources": [
+        "..\\..\\..\\src\\controller\\home\\index.js"
+    ],
+    "names": [
+        "module",
+        "exports",
+        "think",
+        "Controller",
+        "indexAction",
+        "display"
+    ],
+    "mappings": ";;AACAA,OAAOC,OAAP,GAAiB,cAAcC,MAAMC,UAApB,CAA+B;AACtCC,aAAN,GAAoB;AAAA;;AAAA;AAClB,aAAO,MAAKC,OAAL,EAAP;AADkB;AAEnB;AAH2C,CAAhD",
+    "file": "..\\..\\..\\src\\controller\\home\\index.js",
+    "sourcesContent": [
+        "\r\nmodule.exports = class extends think.Controller {\r\n    async indexAction() {\r\n      return this.display();\r\n    }\r\n  };\r\n  "
+    ]
+}

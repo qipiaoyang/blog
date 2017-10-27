@@ -7,8 +7,10 @@ module.exports = class extends Base {
     var _this = this;
 
     return _asyncToGenerator(function* () {
+      console.log(123);
       return _this.display();
     })();
   }
+
 };
 //# sourceMappingURL=index.js.map

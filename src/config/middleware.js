@@ -30,7 +30,9 @@ module.exports = [
   },
   {
     handle: 'router',
-    options: {}
+    options: { 
+      optimizeHomepageRouter: false     
+    }
   },
   'logic',
   'controller'

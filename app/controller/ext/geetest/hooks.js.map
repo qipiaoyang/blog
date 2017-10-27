@@ -1,0 +1,33 @@
+{
+    "version": 3,
+    "sources": [
+        "..\\..\\..\\..\\src\\controller\\ext\\geetest\\hooks.js"
+    ],
+    "names": [
+        "module",
+        "exports",
+        "think",
+        "cmswing",
+        "extIndex",
+        "signinBefore",
+        "Number",
+        "config",
+        "geetest",
+        "extService",
+        "validate",
+        "ctx",
+        "post",
+        "status",
+        "signinView",
+        "html",
+        "hookRender",
+        "loginBefore",
+        "loginView",
+        "isMobile"
+    ],
+    "mappings": ";;AAAA;AACAA,OAAOC,OAAP,GAAiB,cAAcC,MAAMC,OAAN,CAAcC,QAA5B,CAAqC;AACpD;AACMC,cAAN,GAAqB;AAAA;;AAAA;AACnB;AACA,UAAIC,OAAO,MAAKC,MAAL,CAAY,iBAAZ,CAAP,MAA2C,CAA/C,EAAkD;AAChD,cAAMC,UAAU,MAAKC,UAAL,CAAgB,SAAhB,EAA2B,SAA3B,CAAhB;AACA,cAAMC,WAAW,MAAMF,QAAQE,QAAR,CAAiB,MAAKC,GAAtB,EAA2B,MAAKC,IAAL,EAA3B,CAAvB;AACA,YAAIF,SAASG,MAAT,KAAoB,SAAxB,EAAmC;AACjC,iBAAO,IAAP;AACD;AACF;AARkB;AASpB;AACD;AACMC,YAAN,GAAmB;AAAA;;AAAA;AACjB,UAAIR,OAAO,OAAKC,MAAL,CAAY,iBAAZ,CAAP,MAA2C,CAA/C,EAAkD;AAChD,cAAMQ,OAAO,MAAM,OAAKC,UAAL,CAAgB,YAAhB,EAA8B,SAA9B,CAAnB;AACA,eAAOD,IAAP;AACD;AAJgB;AAKlB;;AAED;AACME,aAAN,GAAoB;AAAA;;AAAA;AAClB;AACA,UAAIX,OAAO,OAAKC,MAAL,CAAY,iBAAZ,CAAP,MAA2C,CAA/C,EAAkD;AAChD,cAAMC,UAAU,OAAKC,UAAL,CAAgB,SAAhB,EAA2B,SAA3B,CAAhB;AACA,cAAMC,WAAW,MAAMF,QAAQE,QAAR,CAAiB,OAAKC,GAAtB,EAA2B,OAAKC,IAAL,EAA3B,CAAvB;AACA,YAAIF,SAASG,MAAT,KAAoB,SAAxB,EAAmC;AACjC,iBAAO,IAAP;AACD;AACF;AARiB;AASnB;AACD;AACMK,WAAN,GAAkB;AAAA;;AAAA;AAChB,UAAIZ,OAAO,OAAKC,MAAL,CAAY,iBAAZ,CAAP,MAA2C,CAA/C,EAAkD;AAChD,YAAIQ,IAAJ;AACA,YAAI,OAAKI,QAAT,EAAmB;AACjBJ,iBAAO,MAAM,OAAKC,UAAL,CAAgB,WAAhB,EAA6B,SAA7B,EAAwC,GAAxC,CAAb;AACD,SAFD,MAEO;AACLD,iBAAO,MAAM,OAAKC,UAAL,CAAgB,WAAhB,EAA6B,SAA7B,CAAb;AACD;AACD,eAAOD,IAAP;AACD;AATe;AAUjB;AA1CmD,CAAtD",
+    "file": "..\\..\\..\\..\\src\\controller\\ext\\geetest\\hooks.js",
+    "sourcesContent": [
+        "// hooks\r\nmodule.exports = class extends think.cmswing.extIndex {\r\n  // 后台登录 控制器验证\r\n  async signinBefore() {\r\n    // 钩子业务处理\r\n    if (Number(this.config('ext.geetest.isa')) === 1) {\r\n      const geetest = this.extService('geetest', 'geetest');\r\n      const validate = await geetest.validate(this.ctx, this.post());\r\n      if (validate.status !== 'success') {\r\n        return 'no';\r\n      }\r\n    }\r\n  }\r\n  // 后台登录 视图显示\r\n  async signinView() {\r\n    if (Number(this.config('ext.geetest.isa')) === 1) {\r\n      const html = await this.hookRender('signinView', 'geetest');\r\n      return html;\r\n    }\r\n  }\r\n\r\n  // 后台登录 控制器验证\r\n  async loginBefore() {\r\n    // 钩子业务处理\r\n    if (Number(this.config('ext.geetest.isl')) === 1) {\r\n      const geetest = this.extService('geetest', 'geetest');\r\n      const validate = await geetest.validate(this.ctx, this.post());\r\n      if (validate.status !== 'success') {\r\n        return 'no';\r\n      }\r\n    }\r\n  }\r\n  // 后台登录 视图显示\r\n  async loginView() {\r\n    if (Number(this.config('ext.geetest.isl')) === 1) {\r\n      let html;\r\n      if (this.isMobile) {\r\n        html = await this.hookRender('loginView', 'geetest', 'm');\r\n      } else {\r\n        html = await this.hookRender('loginView', 'geetest');\r\n      }\r\n      return html;\r\n    }\r\n  }\r\n};\r\n"
+    ]
+}

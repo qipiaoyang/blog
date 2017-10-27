@@ -25,6 +25,8 @@ module.exports = [{
   options: {}
 }, {
   handle: 'router',
-  options: {}
+  options: {
+    optimizeHomepageRouter: false
+  }
 }, 'logic', 'controller'];
 //# sourceMappingURL=middleware.js.map

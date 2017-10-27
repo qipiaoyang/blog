@@ -1,2 +1,2 @@
-module.exports = [['/admin', '/admin/index']];
+module.exports = [['/', 'home/index']];
 //# sourceMappingURL=router.js.map

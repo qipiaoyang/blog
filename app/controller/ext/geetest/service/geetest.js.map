@@ -1,0 +1,48 @@
+{
+    "version": 3,
+    "sources": [
+        "..\\..\\..\\..\\..\\src\\controller\\ext\\geetest\\service\\geetest.js"
+    ],
+    "names": [
+        "Geetest",
+        "require",
+        "module",
+        "exports",
+        "think",
+        "Service",
+        "constructor",
+        "ctx",
+        "register",
+        "type",
+        "id",
+        "config",
+        "key",
+        "geetest",
+        "geetest_id",
+        "geetest_key",
+        "deferred",
+        "defer",
+        "err",
+        "data",
+        "reject",
+        "console",
+        "log",
+        "success",
+        "session",
+        "resolve",
+        "promise",
+        "validate",
+        "fallback",
+        "geetest_challenge",
+        "geetest_validate",
+        "geetest_seccode",
+        "res",
+        "status",
+        "info"
+    ],
+    "mappings": ";;AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA,MAAMA,UAAUC,QAAQ,SAAR,CAAhB;AACAC,OAAOC,OAAP,GAAiB,cAAcC,MAAMC,OAApB,CAA4B;AAC3CC,cAAYC,GAAZ,EAAiB;AACf,UAAMA,GAAN;AACD;AACD;AACMC,UAAN,CAAeD,GAAf,EAAoBE,IAApB,EAA0B;AAAA;AACxB,YAAMC,KAAKN,MAAMO,MAAN,CAAa,gBAAb,CAAX,CADwB,CACkB;AAC1C,YAAMC,MAAMR,MAAMO,MAAN,CAAa,iBAAb,CAAZ,CAFwB,CAEoB;AAC5C,YAAME,UAAU,IAAIb,OAAJ,CAAY;AAC1Bc,oBAAYJ,EADc;AAE1BK,qBAAaH;AAFa,OAAZ,CAAhB;AAIA;AACA,YAAMJ,WAAW,YAAM;AACrB,cAAMQ,WAAWZ,MAAMa,KAAN,EAAjB;AACAJ,gBAAQL,QAAR,CAAiB,IAAjB,EAAuB,UAASU,GAAT,EAAcC,IAAd,EAAoB;AACzC,cAAID,GAAJ,EAAS;AACPF,qBAASI,MAAT,CAAgBF,GAAhB;AACD;AACDG,kBAAQC,GAAR,CAAYH,IAAZ;AACA,cAAI,CAACA,KAAKI,OAAV,EAAmB;AACjB;AACA;;AAEA;;AAEA;AACA;AACA;AACAhB,gBAAIiB,OAAJ,CAAY,UAAZ,EAAwB,CAAxB;AACAR,qBAASS,OAAT,CAAiBN,IAAjB;AACA;AACA;AACD,WAbD,MAaO;AACL;AACAZ,gBAAIiB,OAAJ,CAAY,UAAZ,EAAwB,CAAxB;AACAR,qBAASS,OAAT,CAAiBN,IAAjB;AACD;AACF,SAvBD;AAwBA,eAAOH,SAASU,OAAhB;AACD,OA3BD;;AA6BA,aAAO,MAAMlB,UAAb;AArCwB;AAsCzB;AACD;AACMmB,UAAN,CAAepB,GAAf,EAAoBY,IAApB,EAA0B;AAAA;AACxB,YAAMT,KAAKN,MAAMO,MAAN,CAAa,gBAAb,CAAX,CADwB,CACkB;AAC1C,YAAMC,MAAMR,MAAMO,MAAN,CAAa,iBAAb,CAAZ,CAFwB,CAEoB;;AAE5C,YAAME,UAAU,IAAIb,OAAJ,CAAY;AAC1Be,qBAAaH,GADa;AAE1BE,oBAAYJ;AAFc,OAAZ,CAAhB;AAIA,UAAIkB,WAAW,MAAMrB,IAAIiB,OAAJ,CAAY,UAAZ,CAArB;AACAI,iBAAW,CAAC,CAACA,QAAb;AACAP,cAAQC,GAAR,CAAYM,QAAZ;AACA;AACA,YAAMD,WAAW,YAAM;AACrB,cAAMX,WAAWZ,MAAMa,KAAN,EAAjB;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACAJ,gBAAQc,QAAR,CAAiBC,QAAjB,EAA2B;AACzBC,6BAAmBV,KAAKU,iBADC;AAEzBC,4BAAkBX,KAAKW,gBAFE;AAGzBC,2BAAiBZ,KAAKY;AAHG,SAA3B,EAIG,UAASb,GAAT,EAAcK,OAAd,EAAuB;AACxBF,kBAAQC,GAAR,CAAYJ,GAAZ;AACA,cAAIc,MAAM,EAAV;AACA,cAAId,GAAJ,EAAS;AACP;AACAc,kBAAM;AACJC,sBAAQ,OADJ;AAEJC,oBAAMhB;AAFF,aAAN;AAID,WAND,MAMO,IAAI,CAACK,OAAL,EAAc;AACnB;AACAS,kBAAM;AACJC,sBAAQ,MADJ;AAEJC,oBAAM;AAFF,aAAN;AAID,WANM,MAMA;AACLF,kBAAM;AACJC,sBAAQ,SADJ;AAEJC,oBAAM;AAFF,aAAN;AAID;AACDlB,mBAASS,OAAT,CAAiBO,GAAjB;AACD,SA1BD;AA2BA,eAAOhB,SAASU,OAAhB;AACD,OAhDD;AAiDA,aAAO,MAAMC,SAASR,IAAT,CAAb;AA7DwB;AA8DzB;AA3G0C,CAA7C",
+    "file": "..\\..\\..\\..\\..\\src\\controller\\ext\\geetest\\service\\geetest.js",
+    "sourcesContent": [
+        "// +----------------------------------------------------------------------\r\n// | CmsWing [ 网站内容管理框架 ]\r\n// +----------------------------------------------------------------------\r\n// | Copyright (c) 2015-2115 http://www.cmswing.com All rights reserved.\r\n// +----------------------------------------------------------------------\r\n// | Author: arterli <arterli@qq.com>\r\n// +----------------------------------------------------------------------\r\nconst Geetest = require('gt3-sdk');\r\nmodule.exports = class extends think.Service {\r\n  constructor(ctx) {\r\n    super(ctx);\r\n  }\r\n  // 初始化\r\n  async register(ctx, type) {\r\n    const id = think.config('ext.geetest.id');// key\r\n    const key = think.config('ext.geetest.key');// id\r\n    const geetest = new Geetest({\r\n      geetest_id: id,\r\n      geetest_key: key\r\n    });\r\n    // 初始\r\n    const register = () => {\r\n      const deferred = think.defer();\r\n      geetest.register(null, function(err, data) {\r\n        if (err) {\r\n          deferred.reject(err);\r\n        }\r\n        console.log(data);\r\n        if (!data.success) {\r\n          // 进入 failback，如果一直进入此模式，请检查服务器到极验服务器是否可访问\r\n          // 可以通过修改 hosts 把极验服务器 api.geetest.com 指到不可访问的地址\r\n\r\n          // 为以防万一，你可以选择以下两种方式之一：\r\n\r\n          // 1. 继续使用极验提供的failback备用方案\r\n          // req.session.fallback = true;\r\n          // res.send(data);\r\n          ctx.session('fallback', 1);\r\n          deferred.resolve(data);\r\n          // 2. 使用自己提供的备用方案\r\n          // todo\r\n        } else {\r\n          // 正常模式\r\n          ctx.session('fallback', 0);\r\n          deferred.resolve(data);\r\n        }\r\n      });\r\n      return deferred.promise;\r\n    };\r\n\r\n    return await register();\r\n  }\r\n  // 二次服务器验证\r\n  async validate(ctx, data) {\r\n    const id = think.config('ext.geetest.id');// key\r\n    const key = think.config('ext.geetest.key');// id\r\n\r\n    const geetest = new Geetest({\r\n      geetest_key: key,\r\n      geetest_id: id\r\n    });\r\n    let fallback = await ctx.session('fallback');\r\n    fallback = !!fallback;\r\n    console.log(fallback);\r\n    // 验证\r\n    const validate = () => {\r\n      const deferred = think.defer();\r\n      // geetest.validate({\r\n      //\r\n      //   challenge: data.geetest_challenge,\r\n      //   validate: data.geetest_validate,\r\n      //   seccode: data.geetest_seccode\r\n      //\r\n      // }, function (err, result) {\r\n      //   console.log(result);\r\n      //   var data = {status: \"success\"};\r\n      //\r\n      //   if (err || !result) {\r\n      //     console.log(err);\r\n      //     data.status = \"fail\";\r\n      //   }\r\n      //\r\n      //   deferred.resolve(data);\r\n      // });\r\n      // 对ajax提供的验证凭证进行二次验证\r\n      geetest.validate(fallback, {\r\n        geetest_challenge: data.geetest_challenge,\r\n        geetest_validate: data.geetest_validate,\r\n        geetest_seccode: data.geetest_seccode\r\n      }, function(err, success) {\r\n        console.log(err);\r\n        let res = {};\r\n        if (err) {\r\n          // 网络错误\r\n          res = {\r\n            status: 'error',\r\n            info: err\r\n          };\r\n        } else if (!success) {\r\n          // 二次验证失败\r\n          res = {\r\n            status: 'fail',\r\n            info: '登录失败'\r\n          };\r\n        } else {\r\n          res = {\r\n            status: 'success',\r\n            info: '登录成功'\r\n          };\r\n        }\r\n        deferred.resolve(res);\r\n      });\r\n      return deferred.promise;\r\n    };\r\n    return await validate(data);\r\n  }\r\n};\r\n"
+    ]
+}

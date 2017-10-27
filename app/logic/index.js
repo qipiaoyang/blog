@@ -1,4 +1,4 @@
 module.exports = class extends think.Logic {
-  indexAction() {}
+  indexAction(test) {}
 };
 //# sourceMappingURL=index.js.map

@@ -1,0 +1,28 @@
+{
+    "version": 3,
+    "sources": [
+        "..\\..\\..\\..\\src\\controller\\ext\\geetest\\index.js"
+    ],
+    "names": [
+        "module",
+        "exports",
+        "think",
+        "cmswing",
+        "extIndex",
+        "geetestAction",
+        "geetest",
+        "extService",
+        "isPost",
+        "post",
+        "res",
+        "validate",
+        "ctx",
+        "json",
+        "register"
+    ],
+    "mappings": ";;AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACAA,OAAOC,OAAP,GAAiB,cAAcC,MAAMC,OAAN,CAAcC,QAA5B,CAAqC;AACpD;AACMC,eAAN,GAAsB;AAAA;;AAAA;AACpB,YAAMC,UAAU,MAAKC,UAAL,CAAgB,SAAhB,CAAhB,CADoB,CACwB;AAC5C,UAAI,MAAKC,MAAT,EAAiB;AACf,cAAMC,OAAO,MAAKA,IAAL,EAAb;AACA;AACA,cAAMC,MAAM,MAAMJ,QAAQK,QAAR,CAAiB,MAAKC,GAAtB,EAA2BH,IAA3B,CAAlB;AACA,eAAO,MAAKI,IAAL,CAAUH,GAAV,CAAP;AACD,OALD,MAKO;AACL,cAAMA,MAAM,MAAMJ,QAAQQ,QAAR,CAAiB,MAAKF,GAAtB,CAAlB;AACA;AACA,eAAO,MAAKC,IAAL,CAAUH,GAAV,CAAP;AACD;AAXmB;AAYrB;AAdmD,CAAtD",
+    "file": "..\\..\\..\\..\\src\\controller\\ext\\geetest\\index.js",
+    "sourcesContent": [
+        "// +----------------------------------------------------------------------\r\n// | CmsWing [ 网站内容管理框架 ]\r\n// +----------------------------------------------------------------------\r\n// | Copyright (c) 2015-2115 http://www.cmswing.com All rights reserved.\r\n// +----------------------------------------------------------------------\r\n// | Author: arterli <arterli@qq.com>\r\n// +----------------------------------------------------------------------\r\nmodule.exports = class extends think.cmswing.extIndex {\r\n  // 验证码\r\n  async geetestAction() {\r\n    const geetest = this.extService('geetest'); // 加载 commoon 模块下的 geetset service\r\n    if (this.isPost) {\r\n      const post = this.post();\r\n      // console.log(post);\r\n      const res = await geetest.validate(this.ctx, post);\r\n      return this.json(res);\r\n    } else {\r\n      const res = await geetest.register(this.ctx);\r\n      // console.log(res);\r\n      return this.json(res);\r\n    }\r\n  }\r\n};\r\n"
+    ]
+}

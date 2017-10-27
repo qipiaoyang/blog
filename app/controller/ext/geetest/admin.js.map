@@ -1,0 +1,20 @@
+{
+    "version": 3,
+    "sources": [
+        "..\\..\\..\\..\\src\\controller\\ext\\geetest\\admin.js"
+    ],
+    "names": [
+        "module",
+        "exports",
+        "think",
+        "cmswing",
+        "extAdmin",
+        "indexAction",
+        "display"
+    ],
+    "mappings": ";;AAAA;AACA;AACA;AACA;AACA;AACA;AACA;;AAEAA,OAAOC,OAAP,GAAiB,cAAcC,MAAMC,OAAN,CAAcC,QAA5B,CAAqC;AACpD;;;;;AAKMC,eAAN,GAAoB;AAAA;;AAAA;AAClB;;AAEA;AACA;AACA;AACA;AACA;AACA;;AAEA;;AAEA;;AAEA;AACA,mBAAO,MAAKC,OAAL,EAAP;AAfkB;AAgBnB;AAtBmD,CAAtD",
+    "file": "..\\..\\..\\..\\src\\controller\\ext\\geetest\\admin.js",
+    "sourcesContent": [
+        "// +----------------------------------------------------------------------\r\n// | CmsWing [ 网站内容管理框架 ]\r\n// +----------------------------------------------------------------------\r\n// | Copyright (c) 2015-2115 http://www.cmswing.com All rights reserved.\r\n// +----------------------------------------------------------------------\r\n// | Author: arterli <arterli@qq.com>\r\n// +----------------------------------------------------------------------\r\n\r\nmodule.exports = class extends think.cmswing.extAdmin {\r\n  /**\r\n   * index action\r\n   * 插件管理入口\r\n   * @return {Promise} []\r\n   */\r\n  async indexAction() {\r\n    // 分页列表实例\r\n\r\n    // let data = await this.model(\"ext_表名\").page(this.get('page')).countSelect();\r\n    // let Pages = think.adapter(\"pages\", \"page\"); //加载名为 dot 的 Template Adapter\r\n    // let pages = new Pages(this.http); //实例化 Adapter\r\n    // let page = pages.pages(data);\r\n    // this.assign('pagerData', page); //分页展示使用\r\n    // this.assign('list', data.data);\r\n\r\n    // 获取当前插件的分类,插件如有分类的需求，直接调用。\r\n\r\n    // await this.gettype()\r\n\r\n    // 入口模版渲染\r\n    return this.display();\r\n  }\r\n};\r\n"
+    ]
+}

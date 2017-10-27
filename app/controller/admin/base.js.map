@@ -1,0 +1,23 @@
+{
+    "version": 3,
+    "sources": [
+        "..\\..\\..\\src\\controller\\admin\\base.js"
+    ],
+    "names": [
+        "module",
+        "exports",
+        "think",
+        "Controller",
+        "__before",
+        "userinfo",
+        "session",
+        "isEmpty",
+        "assign",
+        "redirect"
+    ],
+    "mappings": ";;AAAAA,OAAOC,OAAP,GAAiB,cAAcC,MAAMC,UAApB,CAA+B;AACtCC,YAAN,GAAiB;AAAA;;AAAA;AACb,gBAAIC,WAAW,MAAM,MAAKC,OAAL,CAAa,UAAb,CAArB;AACA,gBAAI,CAACJ,MAAMK,OAAN,CAAcF,QAAd,CAAL,EAA6B;AACzB,sBAAKG,MAAL,CAAY,UAAZ,EAAuBH,QAAvB;AACH,aAFD,MAEK;;AAED,uBAAO,MAAKI,QAAL,CAAc,cAAd,CAAP;AACH;AAPY;AAQhB;AAT2C,CAAhD",
+    "file": "..\\..\\..\\src\\controller\\admin\\base.js",
+    "sourcesContent": [
+        "module.exports = class extends think.Controller {\r\n    async __before() {     \r\n        let userinfo = await this.session('userinfo');\r\n        if (!think.isEmpty(userinfo)){ \r\n            this.assign('userinfo',userinfo);  \r\n        }else{  \r\n            \r\n            return this.redirect('/admin/index');  \r\n        } \r\n    }\r\n}"
+    ]
+}
