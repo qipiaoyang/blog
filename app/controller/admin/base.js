@@ -5,12 +5,13 @@ module.exports = class extends think.Controller {
         var _this = this;
 
         return _asyncToGenerator(function* () {
-            let userinfo = yield _this.session('userinfo');
+            const userinfo = yield _this.session('userinfo');
+            console.log(_this);
             if (!think.isEmpty(userinfo)) {
                 _this.assign('userinfo', userinfo);
             } else {
-
-                return _this.redirect('/admin/index');
+                _this.redirect('/admin/login');
+                return false;
             }
         })();
     }

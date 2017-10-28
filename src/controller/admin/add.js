@@ -5,5 +5,4 @@ module.exports = class extends Base {
     return this.display();
   }
 
-
 };

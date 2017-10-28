@@ -12,4 +12,4 @@ module.exports = class extends Base {
   }
 
 };
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=add.js.map
