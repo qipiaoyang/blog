@@ -9,11 +9,13 @@
         "think",
         "Controller",
         "indexAction",
+        "assign",
+        "name",
         "display"
     ],
-    "mappings": ";;AACAA,OAAOC,OAAP,GAAiB,cAAcC,MAAMC,UAApB,CAA+B;AACtCC,aAAN,GAAoB;AAAA;;AAAA;AAClB,aAAO,MAAKC,OAAL,EAAP;AADkB;AAEnB;AAH2C,CAAhD",
+    "mappings": ";;AACAA,OAAOC,OAAP,GAAiB,cAAcC,MAAMC,UAApB,CAA+B;AACxCC,aAAN,GAAoB;AAAA;;AAAA;AAClB,YAAKC,MAAL,CAAY;AACRC,cAAK;AADG,OAAZ;AAGA,YAAMA,OAAO,MAAKA,IAAlB;AACA,aAAO,MAAKC,OAAL,EAAP;AALkB;AAMnB;AAP6C,CAAhD",
     "file": "..\\..\\..\\src\\controller\\home\\index.js",
     "sourcesContent": [
-        "\r\nmodule.exports = class extends think.Controller {\r\n    async indexAction() {\r\n      return this.display();\r\n    }\r\n  };\r\n  "
+        "\r\nmodule.exports = class extends think.Controller {\r\n  async indexAction() {\r\n    this.assign({\r\n        name:'test'\r\n    })\r\n    const name = this.name;\r\n    return this.display();\r\n  }\r\n};\r\n"
     ]
 }

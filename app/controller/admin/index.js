@@ -7,6 +7,12 @@ module.exports = class extends Base {
     var _this = this;
 
     return _asyncToGenerator(function* () {
+
+      _this.assign({
+        nan: false,
+        nv: false
+      });
+
       return _this.display();
     })();
   }

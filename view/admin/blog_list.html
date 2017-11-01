@@ -1,0 +1,26 @@
+<!--{% extends "./common/common.html" %}-->
+
+{% block content %}
+<form>
+    <span class="bg-primary center-block" style="text-align: center">博客分类列表</span>
+    <table id="example2" class="table table-bordered table-striped">
+        <thead>
+        <tr>
+            <th>分类名称</th>
+            <th>备注</th>
+            <th>操作</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for data in category %}
+        <tr>
+            <td>{{data.id}}</td>
+            <td>{{data.name}}</td>
+            <td><button>编辑</button></td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <a href="/admin/blog/add">新增</a>
+</form>
+{% endblock%}

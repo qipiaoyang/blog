@@ -5,6 +5,10 @@ module.exports = class extends think.Controller {
     var _this = this;
 
     return _asyncToGenerator(function* () {
+      _this.assign({
+        name: 'test'
+      });
+      const name = _this.name;
       return _this.display();
     })();
   }

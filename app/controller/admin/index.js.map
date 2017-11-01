@@ -9,11 +9,14 @@
         "module",
         "exports",
         "indexAction",
+        "assign",
+        "nan",
+        "nv",
         "display"
     ],
-    "mappings": ";;AAAA,MAAMA,OAAOC,QAAQ,WAAR,CAAb;;AAEAC,OAAOC,OAAP,GAAiB,cAAcH,IAAd,CAAmB;AAC5BI,aAAN,GAAoB;AAAA;;AAAA;AAClB,aAAO,MAAKC,OAAL,EAAP;AADkB;AAEnB;;AAHiC,CAApC",
+    "mappings": ";;AAAA,MAAMA,OAAOC,QAAQ,WAAR,CAAb;;AAEAC,OAAOC,OAAP,GAAiB,cAAcH,IAAd,CAAmB;AAC5BI,aAAN,GAAoB;AAAA;;AAAA;;AAElB,YAAKC,MAAL,CAAY;AACRC,aAAK,KADG;AAERC,YAAI;AAFI,OAAZ;;AAMA,aAAO,MAAKC,OAAL,EAAP;AARkB;AASnB;;AAViC,CAApC",
     "file": "..\\..\\..\\src\\controller\\admin\\index.js",
     "sourcesContent": [
-        "const Base = require('./base.js');\n\nmodule.exports = class extends Base {\n  async indexAction() {\n    return this.display();\n  }\n\n\n};\n"
+        "const Base = require('./base.js');\n\nmodule.exports = class extends Base {\n  async indexAction() {\n\n    this.assign({\n        nan: false,\n        nv: false\n    })\n\n\n    return this.display();\n  }\n\n\n};\n"
     ]
 }

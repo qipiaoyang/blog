@@ -6,7 +6,6 @@ module.exports = class extends think.Controller {
 
         return _asyncToGenerator(function* () {
             const userinfo = yield _this.session('userinfo');
-            console.log(_this);
             if (!think.isEmpty(userinfo)) {
                 _this.assign('userinfo', userinfo);
             } else {

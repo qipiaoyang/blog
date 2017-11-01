@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "gt3-sdk": "^2.0.0",
+    "superagent": "^3.8.0",
     "think-cache": "^1.0.0",
     "think-cache-file": "^1.0.8",
     "think-logger3": "^1.0.0",
