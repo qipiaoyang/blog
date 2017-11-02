@@ -43,7 +43,8 @@ exports.model = {
     port: '3306',
     user: 'root',
     password: 'qi956634645',
-    dateStrings: true
+    dateStrings: true,
+    pageSize: 2
   }
 };
 

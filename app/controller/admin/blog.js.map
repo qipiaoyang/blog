@@ -15,21 +15,31 @@
         "model",
         "select",
         "assign",
-        "addAction",
         "isPost",
-        "test",
+        "category_del",
         "post",
-        "category_add",
+        "del_name",
         "name",
         "res",
+        "where",
+        "delete",
+        "json",
+        "data",
+        "addAction",
+        "test",
+        "category_add",
         "add",
         "redirect",
         "fail",
-        "delAction"
+        "editAction",
+        "console",
+        "log",
+        "category_edit",
+        "edit_value"
     ],
-    "mappings": ";;AAAA,MAAMA,OAAOC,QAAQ,WAAR,CAAb;;AAEAC,OAAOC,OAAP,GAAiB,cAAcH,IAAd,CAAmB;AAC5BI,eAAN,GAAoB;AAAA;;AAAA;AAClB,mBAAO,MAAKC,OAAL,EAAP;AADkB;AAEnB;;AAEKC,cAAN,GAAmB;AAAA;;AAAA;;AAEf,kBAAMC,WAAU,MAAM,OAAKC,KAAL,CAAW,gBAAX,EAA6BC,MAA7B,EAAtB;AACA,mBAAKC,MAAL,CAAY;AACRH,0BAASA;AADD,aAAZ;AAGA,mBAAO,OAAKF,OAAL,EAAP;AANe;AAOlB;;AAED;AACMM,aAAN,GAAkB;AAAA;;AAAA;;AAEd,gBAAG,OAAKC,MAAR,EAAgB;AACZ,sBAAMC,OAAO,MAAM,OAAKC,IAAL,EAAnB;AACA,sBAAMC,eAAeF,KAAKG,IAA1B;AACA,oBAAIT,WAAW,OAAKC,KAAL,CAAW,gBAAX,CAAf;AACA,oBAAIS,MAAM,MAAMV,SAASW,GAAT,CAAa,EAACF,MAAMD,YAAP,EAAb,CAAhB;AACA,oBAAGE,GAAH,EAAQ;AACJ,2BAAO,OAAKE,QAAL,CAAc,kBAAd,CAAP;AACH,iBAFD,MAEO;AACH,2BAAKC,IAAL,CAAU,MAAV;AACH;AACJ,aAVD,MAUO;AACH,uBAAO,OAAKf,OAAL,EAAP;AACH;AAda;AAejB;;AAED;AACOgB,aAAN,GAAmB;AAAA;;AAAA;;AAEhB,mBAAO,OAAKhB,OAAL,EAAP;AAFgB;AAGlB;AApCgC,CAApC",
+    "mappings": ";;AAAA,MAAMA,OAAOC,QAAQ,WAAR,CAAb;;AAEAC,OAAOC,OAAP,GAAiB,cAAcH,IAAd,CAAmB;AAC5BI,eAAN,GAAoB;AAAA;;AAAA;AAClB,mBAAO,MAAKC,OAAL,EAAP;AADkB;AAEnB;;AAEKC,cAAN,GAAmB;AAAA;;AAAA;;AAEf,kBAAMC,WAAU,MAAM,OAAKC,KAAL,CAAW,gBAAX,EAA6BC,MAA7B,EAAtB;AACA,mBAAKC,MAAL,CAAY;AACRH,0BAASA;AADD,aAAZ;AAGA;AACA,gBAAG,OAAKI,MAAR,EAAgB;AACZ,sBAAMC,eAAe,MAAM,OAAKC,IAAL,EAA3B;AACA,sBAAMC,WAAWF,aAAaG,IAA9B;AACA,oBAAIR,WAAW,OAAKC,KAAL,CAAW,gBAAX,CAAf;AACA,oBAAIQ,MAAM,MAAMT,SAASU,KAAT,CAAe,EAACF,MAAKD,QAAN,EAAf,EAAgCI,MAAhC,EAAhB;AACA,oBAAGF,GAAH,EAAQ;AACJ,2BAAO,OAAKG,IAAL,CAAU;AACbJ,8BAAKD,QADQ;AAEbM,8BAAK;AAFQ,qBAAV,CAAP;AAIH,iBALD,MAKO;AACH,2BAAO,OAAKD,IAAL,CAAU;AACbJ,8BAAKD,QADQ;AAEbM,8BAAK;AAFQ,qBAAV,CAAP;AAIH;AACJ;;AAGD,mBAAO,OAAKf,OAAL,EAAP;AA1Be;AA2BlB;;AAED;AACMgB,aAAN,GAAkB;AAAA;;AAAA;;AAEd,gBAAG,OAAKV,MAAR,EAAgB;AACZ,sBAAMW,OAAO,MAAM,OAAKT,IAAL,EAAnB;AACA,sBAAMU,eAAeD,KAAKP,IAA1B;AACA,oBAAIR,WAAW,OAAKC,KAAL,CAAW,gBAAX,CAAf;AACA,oBAAIQ,MAAM,MAAMT,SAASiB,GAAT,CAAa,EAACT,MAAMQ,YAAP,EAAb,CAAhB;AACA,oBAAGP,GAAH,EAAQ;AACJ,2BAAO,OAAKS,QAAL,CAAc,kBAAd,CAAP;AACH,iBAFD,MAEO;AACH,2BAAKC,IAAL,CAAU,MAAV;AACH;AACJ,aAVD,MAUO;AACH,uBAAO,OAAKrB,OAAL,EAAP;AACH;AAda;AAejB;;AAED;AACOsB,cAAN,GAAoB;AAAA;;AAAA;AACjBC,oBAAQC,GAAR,CAAY,GAAZ;AACC,kBAAMC,gBAAgB,OAAKjB,IAAL,EAAtB;AACA,kBAAMkB,aAAaD,cAAcf,IAAjC;AACAa,oBAAQC,GAAR,CAAYE,UAAZ;AACD,gBAAG,OAAKpB,MAAR,EAAgB;AACZiB,wBAAQC,GAAR,CAAY,GAAZ;AAEH;AACD,mBAAO,OAAKxB,OAAL,EAAP;AATiB;AAUnB;AA/DgC,CAApC",
     "file": "..\\..\\..\\src\\controller\\admin\\blog.js",
     "sourcesContent": [
-        "const Base = require('./base.js');\n\nmodule.exports = class extends Base {\n  async indexAction() {\n    return this.display();\n  }\n\n  async listAction() {\n\n      const category =await this.model('think_category').select();\n      this.assign({\n          category:category\n      })\n      return this.display();\n  }\n\n  //添加功能\n  async addAction() {\n\n      if(this.isPost) {\n          const test = await this.post();\n          const category_add = test.name;\n          let category = this.model('think_category');\n          let res = await category.add({name: category_add});\n          if(res) {\n              return this.redirect('/admin/blog/list');\n          } else {\n              this.fail('更新失败');\n          }\n      } else {\n          return this.display();\n      }\n  }\n\n  //删除功能\n   async delAction () {\n      \n      return this.display();\n   }\n};\n"
+        "const Base = require('./base.js');\n\nmodule.exports = class extends Base {\n  async indexAction() {\n    return this.display();\n  }\n\n  async listAction() {\n\n      const category =await this.model('think_category').select();\n      this.assign({\n          category:category\n      });\n      //删除功能\n      if(this.isPost) {\n          const category_del = await this.post();\n          const del_name = category_del.name;\n          let category = this.model('think_category');\n          let res = await category.where({name:del_name}).delete();\n          if(res) {\n              return this.json({\n                  name:del_name,\n                  data:'删除成功'\n              });\n          } else {\n              return this.json({\n                  name:del_name,\n                  data:'删除失败'\n              })\n          }\n      }\n\n\n      return this.display();\n  }\n\n  //添加功能\n  async addAction() {\n\n      if(this.isPost) {\n          const test = await this.post();\n          const category_add = test.name;\n          let category = this.model('think_category');\n          let res = await category.add({name: category_add});\n          if(res) {\n              return this.redirect('/admin/blog/list');\n          } else {\n              this.fail('更新失败');\n          }\n      } else {\n          return this.display();\n      }\n  }\n\n  //  修改功能\n   async editAction () {\n      console.log(123);\n       const category_edit = this.post();\n       const edit_value = category_edit.name;\n       console.log(edit_value);\n      if(this.isPost) {\n          console.log(456);\n\n      }\n      return this.display();\n   }\n};\n"
     ]
 }

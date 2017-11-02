@@ -20,6 +20,25 @@ module.exports = class extends Base {
             _this2.assign({
                 category: category
             });
+            //删除功能
+            if (_this2.isPost) {
+                const category_del = yield _this2.post();
+                const del_name = category_del.name;
+                let category = _this2.model('think_category');
+                let res = yield category.where({ name: del_name }).delete();
+                if (res) {
+                    return _this2.json({
+                        name: del_name,
+                        data: '删除成功'
+                    });
+                } else {
+                    return _this2.json({
+                        name: del_name,
+                        data: '删除失败'
+                    });
+                }
+            }
+
             return _this2.display();
         })();
     }
@@ -46,12 +65,18 @@ module.exports = class extends Base {
         })();
     }
 
-    //删除功能
-    delAction() {
+    //  修改功能
+    editAction() {
         var _this4 = this;
 
         return _asyncToGenerator(function* () {
-
+            console.log(123);
+            const category_edit = _this4.post();
+            const edit_value = category_edit.name;
+            console.log(edit_value);
+            if (_this4.isPost) {
+                console.log(456);
+            }
             return _this4.display();
         })();
     }

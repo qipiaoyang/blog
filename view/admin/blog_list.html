@@ -1,7 +1,7 @@
 <!--{% extends "./common/common.html" %}-->
 
 {% block content %}
-<form>
+<!--<form>-->
     <span class="bg-primary center-block" style="text-align: center">博客分类列表</span>
     <table id="example2" class="table table-bordered table-striped">
         <thead>
@@ -15,12 +15,55 @@
         {% for data in category %}
         <tr>
             <td>{{data.id}}</td>
-            <td>{{data.name}}</td>
-            <td><button>编辑</button></td>
+            <td class="name">{{data.name}}</td>
+            <td><button class="edit">编辑</button><button class="del">删除</button></td>
         </tr>
         {% endfor %}
         </tbody>
     </table>
     <a href="/admin/blog/add">新增</a>
-</form>
+<!--</form>-->
+<script src="/static/admin/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+    //  点击删除按钮
+    $('.del').each(function () {
+        $(this).on("click",function(){
+            let category_del = $(this).parent().parent().find('td.name').html();
+            $.ajax({
+                data:{
+                    name:category_del
+                },
+                url:'/admin/blog/list',
+                type:'post',
+                success:function (res) {
+                    toastr.success(res.name + res.data );
+                    setTimeout(function () {
+                        location.reload();
+                    },1500);
+                }
+            })
+        });
+    })
+
+    //  点击编辑按钮
+    $('.edit').each(function () {
+        $(this).on("click",function(){
+            let category_edit = $(this).html();
+            $.ajax({
+                data:{
+                    name:category_edit
+                },
+                url:'/admin/blog/edit',
+                type:'post',
+                success:function (res) {
+                    toastr.success(res.name + res.data );
+                    setTimeout(function () {
+                        location.reload();
+                    },1500);
+                }
+            });
+            location.href = '/admin/blog/edit';
+        });
+    })
+</script>
 {% endblock%}
