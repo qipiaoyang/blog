@@ -1,0 +1,9 @@
+<!--{% extends "./common/common.html" %}-->
+
+{% block content %}
+<form action="/admin/content/add?category_id={{category_id}}" method="post">
+    <span class="bg-primary center-block" style="text-align: center">添加内容分类</span>
+    <input type="text" name="list" placeholder="请输入要添加的类名">
+    <button type="submit">提交</button>
+</form>
+{% endblock%}

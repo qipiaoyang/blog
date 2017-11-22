@@ -1,4 +1,4 @@
-<!--{% extends "./common/common.html" %}-->
+{% extends "./common/common.html" %}
 
 {% block content %}
 <!--<form>-->
@@ -16,7 +16,7 @@
         <tr>
             <td>{{data.id}}</td>
             <td class="name">{{data.name}}</td>
-            <td><button class="edit">编辑</button><button class="del">删除</button></td>
+            <td><a href="/admin/blog/edit?edit={{data.name}}" class="edit">编辑</a><button class="del">删除</button><a href="/admin/content/list?category_id={{data.id}}">详情查看</a></td>
         </tr>
         {% endfor %}
         </tbody>
@@ -45,25 +45,5 @@
         });
     })
 
-    //  点击编辑按钮
-    $('.edit').each(function () {
-        $(this).on("click",function(){
-            let category_edit = $(this).html();
-            $.ajax({
-                data:{
-                    name:category_edit
-                },
-                url:'/admin/blog/edit',
-                type:'post',
-                success:function (res) {
-                    toastr.success(res.name + res.data );
-                    setTimeout(function () {
-                        location.reload();
-                    },1500);
-                }
-            });
-            location.href = '/admin/blog/edit';
-        });
-    })
 </script>
 {% endblock%}

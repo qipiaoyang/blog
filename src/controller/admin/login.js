@@ -4,6 +4,14 @@ module.exports = class extends think.Controller {
     }
     async loginAction() {
         this.is_login = await this.islogin();
+
+        /**
+         * 这里进行权限判断
+         *
+         */
+
+
+
         if(this.isAjax()){
             //获取登陆的账号密码
             let username = this.post('username');
@@ -36,7 +44,6 @@ module.exports = class extends think.Controller {
         const geetest = this.model('geetest'); // 加载 commoon 模块下的 geetset service
         if (this.isPost) {
             const post = this.post();
-            console.log(post);
             const res = await geetest.validate(this.ctx, post);
             return this.json(res);
         } else {

@@ -1,0 +1,51 @@
+{% extends "./common/common.html" %}
+
+{% block content %}
+<!--<form>-->
+<span class="bg-primary center-block" style="text-align: center">{{category_name}}详情列表</span>
+<table id="example2" class="table table-bordered table-striped">
+    <thead>
+    <tr>
+        <th>分类名称</th>
+        <th>备注</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for data in category %}
+    <tr>
+        <td>{{data.id}}</td>
+        <td class="list">{{data.list}}</td>
+        <td><a href="/admin/content/edit?category_id={{data.id}}&edit={{data.list}}" class="edit">编辑</a><button class="del">删除</button><a href="/admin/article/index?articleId={{data.id}}">详情查看</a></td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+<a href="/admin/content/add?category_id={{category_id}}">新增</a><a href="/admin/blog/list">返回</a>
+
+<script src="/static/admin/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+    //  点击删除按钮
+    $('.del').each(function () {
+        $(this).on("click",function(){
+            let category_del = $(this).parent().parent().find('td.list').html();
+            console.log(category_del);
+            $.ajax({
+                data:{
+                    name:category_del
+                },
+                url:'/admin/content/list',
+                type:'post',
+                success:function (res) {
+                    toastr.success(res.name + res.data );
+                    setTimeout(function () {
+                        location.reload();
+                    },1500);
+                }
+            })
+        });
+    })
+
+</script>
+
+{% endblock%}

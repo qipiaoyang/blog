@@ -1,9 +1,9 @@
 <!--{% extends "./common/common.html" %}-->
 
 {% block content %}
-<form action="/admin/blog/update?edit={{category_edit}}" method="post">
+<form action="/admin/content/update?edit={{content_edit}}" method="post">
     <span class="bg-primary center-block" style="text-align: center">博客分类编辑列表</span>
-    <input type="text" placeholder="请输入类名" value="{{category_edit}}" name="test">
+    <input type="text" placeholder="请输入类名" value="{{content_edit}}" name="test">
     <button type="submit" class="save">保存</button>
 </form>
 <script src="/static/admin/js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
