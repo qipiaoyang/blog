@@ -7,7 +7,5 @@ module.exports = class extends think.Controller {
             this.redirect('/admin/login');
             return false;
         }
-        console.log(this.ctx.action);
-        console.log(this.ctx.controller);
     }
 }

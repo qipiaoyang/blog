@@ -1,0 +1,39 @@
+{
+    "version": 3,
+    "sources": [
+        "..\\..\\..\\src\\controller\\admin\\article.js"
+    ],
+    "names": [
+        "Base",
+        "require",
+        "module",
+        "exports",
+        "indexAction",
+        "content",
+        "model",
+        "where",
+        "articleId",
+        "find",
+        "assign",
+        "name",
+        "setting",
+        "value",
+        "isPost",
+        "article",
+        "post",
+        "article_model",
+        "res",
+        "update",
+        "bgg",
+        "display",
+        "listAction",
+        "addAction",
+        "editAction",
+        "updateAction"
+    ],
+    "mappings": ";;AAAA,MAAMA,OAAOC,QAAQ,WAAR,CAAb;;AAEAC,OAAOC,OAAP,GAAiB,cAAcH,IAAd,CAAmB;AAC5BI,eAAN,GAAoB;AAAA;;AAAA;AAClB,kBAAMC,UAAU,MAAM,MAAKC,KAAL,CAAW,eAAX,EAA4BC,KAA5B,CAAkC,EAACC,WAAU,EAAX,EAAlC,EAAkDC,IAAlD,EAAtB;;AAEA,kBAAKC,MAAL,CAAY;AACRC,sBAAK,KADG;AAERC,yBAAQ,GAFA;AAGRC,uBAAMR,QAAQA;AAHN,aAAZ;;AAMA,gBAAG,MAAKS,MAAR,EAAgB;AACZ,sBAAMC,UAAU,MAAM,MAAKC,IAAL,EAAtB;AACA,sBAAMC,gBAAgB,MAAKX,KAAL,CAAW,eAAX,CAAtB;AACA,sBAAMY,MAAM,MAAMD,cAAcV,KAAd,CAAoB,EAACC,WAAW,EAAZ,EAApB,EAAqCW,MAArC,CAA4C,EAACd,SAAQU,QAAQK,GAAjB,EAA5C,CAAlB;AACH;;AAED,mBAAO,MAAKC,OAAL,EAAP;AAfkB;AAgBnB;;AAEKC,cAAN,GAAmB;AAAA;;AAAA;;AAEf,mBAAO,OAAKD,OAAL,EAAP;AAFe;AAGlB;;AAED;AACME,aAAN,GAAkB;AAAA;AAEjB;;AAED;AACOC,cAAN,GAAoB;AAAA;AAEnB;;AAGD;AACMC,gBAAN,GAAqB;AAAA;AAEpB;;AAtCgC,CAApC",
+    "file": "..\\..\\..\\src\\controller\\admin\\article.js",
+    "sourcesContent": [
+        "const Base = require('./base.js');\n\nmodule.exports = class extends Base {\n  async indexAction() {\n    const content = await this.model('think_article').where({articleId:22}).find();\n\n    this.assign({\n        name:'bgg',\n        setting:0.8,\n        value:content.content\n    })\n\n    if(this.isPost) {\n        const article = await this.post();\n        const article_model = this.model('think_article');\n        const res = await article_model.where({articleId: 22}).update({content:article.bgg});\n    }\n\n    return this.display();\n  }\n\n  async listAction() {\n\n      return this.display();\n  }\n\n  //添加功能\n  async addAction() {\n\n  }\n\n  //  修改功能\n   async editAction () {\n\n   }\n\n\n   //   更新模块\n   async updateAction() {\n\n   }\n\n\n\n};\n"
+    ]
+}
